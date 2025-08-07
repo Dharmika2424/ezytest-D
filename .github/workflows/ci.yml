@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run basic checks
+      run: |
+        echo "Running tests..."
+        # Add your test commands here without package installations
+    - name: Build verification
+      run: |
+        echo "Verifying build..."
+        # Add your build verification steps here
